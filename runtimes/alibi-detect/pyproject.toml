@@ -10,11 +10,15 @@ packages = [{include = "mlserver_alibi_detect"}]
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
 mlserver = "*"
-alibi-detect = {extras = ["tensorflow"], version = "*"}
+alibi-detect = {path = "../../../alibi-detect", extras = ["tensorflow"], develop=true}
 
 [tool.poetry.group.dev.dependencies]
 mlserver = {path = "../..", develop = true}
+<<<<<<< Updated upstream
 tensorflow = "<2.15"
+=======
+tensorflow = "^2.16.2"
+>>>>>>> Stashed changes
 
 [build-system]
 requires = ["poetry-core"]
